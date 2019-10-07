@@ -1,0 +1,35 @@
+{
+    "name": "cordova-plugin-esimtool",
+    "version": "0.0.1",
+    "description": "An Android Cordova plugin that allows users to check for eSim support.",
+    "cordova": {
+      "id": "cordova-plugin-esimtool",
+      "platforms": [
+        "android"
+      ]
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/joaogdomingos12/esimtool.git"
+    },
+    "keywords": [
+      "Sim",
+      "Sim Card",
+      "simcard",
+      "eSim",
+      "ecosystem:cordova",
+      "cordova-android"
+    ],
+    "engines": [
+      {
+        "name": "cordova",
+        "version": ">=3.0.0"
+      }
+    ],
+    "author": "Joao Domingos <joaodomingos@deloitte.pt>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/joaogdomingos12/esimtool/issues"
+    },
+    "homepage": "https://github.com/joaogdomingos12/esimtool"
+  }
