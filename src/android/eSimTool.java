@@ -1,4 +1,4 @@
-package com.stanleyidesis.cordova.plugin;
+package com.joaodomingos.cordova.plugin;
 // The native Toast API
 import android.widget.Toast;
 // Cordova-required packages
@@ -18,7 +18,22 @@ public class eSimTool extends CordovaPlugin {
         callbackContext.error("\"" + action + "\" is not a recognized action.");
         return false;
       }
-      
+      String message;
+      String duration;
+      try {
+        JSONObject options = args.getJSONObject(0);
+        message = options.getString("message");
+        duration = options.getString("duration");
+      } catch (JSONException e) {
+        callbackContext.error("Error encountered: " + e.getMessage());
+        return false;
+      }
+      // Create the toast
+      Toast toast = Toast.makeText(cordova.getActivity(), message,
+        DURATION_LONG.equals(duration) ? Toast.LENGTH_LONG : Toast.LENGTH_SHORT);
+      // Display toast
+      toast.show();
+      // Send a positive result to the callbackContext
       PluginResult pluginResult = new PluginResult(PluginResult.Status.OK);
       callbackContext.sendPluginResult(pluginResult);
       return true;
