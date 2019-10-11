@@ -21,11 +21,10 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="eSimTool">
-                <param name="android-package" value="package com.joaodomingos.cordova.plugin.eSimTool"/>
+                <param name="android-package" value="com.joaodomingos.cordova.plugin.eSimTool"/>
             </feature>
         </config-file>
 
         <source-file src="src/android/eSimTool.java" target-dir="src/com/joaodomingos/cordova/plugin" />
     </platform>
 </plugin>
-
